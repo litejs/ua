@@ -1,5 +1,8 @@
 
 module.exports = [
+{browser:{name:"Safari",ver:"?",full:"?"}},
+"Mozilla/5.0 (Windows; U; Windows NT 6.0; en-US) Safari/421.0",
+
 {browser:{name:"Safari",ver:"7",full:"7.0.3"}},
 "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_9_3) AppleWebKit/537.75.14 (KHTML, like Gecko) Version/7.0.3 Safari/7046A194A",
 {browser:{name:"Safari",ver:"6",full:"6.0"}},

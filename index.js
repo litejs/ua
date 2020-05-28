@@ -3,7 +3,7 @@
 
 !function(exports) {
 	// http://www.zytrax.com/tech/web/mobile_ids.html
-	exports.ua = parse
+	exports.ua = ua
 
 	var re = /(\w+)(?:\/| )(\S+)(?:\s*\((.+?)\))?/g
 	, MOBILE = "Mobile"
@@ -64,7 +64,7 @@
 		"6.4":"10"
 	}
 
-	function parse(str) {
+	function ua(str) {
 		var _device, match, spi
 		, sp = ""
 		, map = {}
@@ -119,7 +119,7 @@
 							t < 412 ? "1.3" :
 							t < 420 ? "2.0" :
 							map.Version ? map.Version.ver :
-							match.ver
+							"?"
 						)
 					}
 				} else if ((idx = spi(t == "iOS" || t == "OS X" ? "OS" : name)) > -1) {

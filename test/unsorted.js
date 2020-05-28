@@ -13,6 +13,9 @@ module.exports = [
 "Mozilla/5.0 (Mobile; LG-D300; rv:18.1) Gecko/18.1 Firefox/18.1",
 "Mozilla/5.0 (Mobile; ALCATELOneTouch4012X; rv:18.1) Gecko/18.1 Firefox/18.1",
 
+{os:{name:"Firefox OS",ver:"?",full:"?"},browser:{name:"Firefox",ver:"18",full:"18.1"},device:"Mobile"},
+"Mozilla/5.0 (Mobile; rv:18.1) Gecko/17.1 Firefox/18.1",
+
 // Firefox for iOS
 {os:{name:"iOS",ver:"8",full:"8.3"},browser:{name:"Firefox",ver:"1",full:"1.0"},device:"Tablet"},
 "Mozilla/5.0 (iPad; CPU iPhone OS 8_3 like Mac OS X) AppleWebKit/600.1.4 (KHTML, like Gecko) FxiOS/1.0 Mobile/12F69 Safari/600.1.4",

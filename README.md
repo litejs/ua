@@ -11,7 +11,7 @@
 ==========
 
 
-Simple User-Agent parser for statistical purposes.
+Simple User-Agent parser for statistical purposes in 2KB minified.
 
 ```javascript
 var ua = require("@litejs/ua").ua
