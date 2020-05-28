@@ -11,8 +11,14 @@
 ==========
 
 
-Simple User-Agent parser for statistical reasons.
+Simple User-Agent parser for statistical purposes.
 
+```javascript
+var ua = require("@litejs/ua").ua
+
+ua("Mozilla/5.0 (Mobile; rv:18.1) Gecko/18.1 Firefox/18.1")
+// {os:{name:"Firefox OS",ver:"1",full:"1.1"},browser:{name:"Firefox",ver:"18",full:"18.1"},device:"Mobile"}
+```
 
 
 ## External links
