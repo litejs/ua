@@ -24,7 +24,7 @@ jobs:
       with:
         node-version: '12'
     - run: npm install -g litejs nyc coveralls
-    - run: nyc -r lcovonly -r text -c false lj t
+    - run: nyc -r lcovonly -r text -c false --check-coverage --branches=100 --functions=100 --lines=100 --statements=100 lj t
     - uses: coverallsapp/github-action@master
       with:
         github-token: ${{ secrets.github_token }}
