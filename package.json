@@ -1,0 +1,17 @@
+{
+  "name": "@litejs/ua",
+  "version": "20.5.0",
+  "license": "MIT",
+  "author": "Lauri Rooden <lauri@rooden.ee>",
+  "description": "Simple User-Agent parser",
+  "keywords": [
+    "user-agent",
+    "litejs"
+  ],
+  "main": "index.js",
+  "files": [
+    "index.js"
+  ],
+  "repository": "git://github.com/litejs/ua.git",
+  "bugs": "https://github.com/litejs/ua/issues"
+}

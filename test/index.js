@@ -1,10 +1,10 @@
 
 
 
-require("../..")
-.describe("lib/util")
+require("litejs/test")
+.describe("ua")
 .it ("should parse user agents", function(assert) {
-	var parse = require("../../../lib/ua.js").ua
+	var parse = require("..").ua
 	, files = [
 		"android.js",
 		"safari.js",
