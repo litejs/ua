@@ -37,6 +37,27 @@ module.exports = [
 {os:{name:"webOS",ver:"2",full:"2.0.1"},browser:{name:"Safari",ver:"1",full:"1.0"},device:"SmartTV"},
 "Mozilla/5.0 (web0S/2.0.1; U; en-US) AppleWebKit/532.2 (KHTML, like Gecko) Version/1.0 Safari/532.2 Pre/1.2",
 
+{os:{name:"Linux"},browser:{name:"Chrome",ver:"5",full:"5.0.375.127"},device:"SmartTV"},
+"Mozilla/5.0 (X11; U; Linux i686; en-US) AppleWebKit/533.4 (KHTML, like Gecko) Chrome/5.0.375.127 Large Screen Safari/533.4 GoogleTV/161242",
+"Mozilla/5.0 (SMART-TV; X11; Linux armv7l) AppleWebKit/537.42 (KHTML, like Gecko) Chromium/5.0.375.127 Chrome/5.0.375.127 Safari/537.42",
+
+"Mozilla/5.0 (Linux; NetCast; U) AppleWebKit/537.31 (KHTML, like Gecko) Chrome/5.0.375.127 Safari/537.31 SmartTV/5.0",
+
+{os:{name:"Tizen",ver:"2",full:"2.3"}},
+"Mozilla/5.0 (Linux; Tizen 2.3; SAMSUNG SM-Z130H) AppleWebKit/537.3 (KHTML, like Gecko) Version/2.3 Mobile Safari/537.3",
+
+{os:{name:"Tizen",ver:"2",full:"2.4.0"},browser:{name:"SamsungBrowser",ver:"1",full:"1.1"},device:"SmartTV"},
+"Mozilla/5.0 (SMART-TV; Linux; Tizen 2.4.0) AppleWebkit/538.1 (KHTML, like Gecko) SamsungBrowser/1.1 TV Safari/538.1",
+
+{os:{name:"Tizen",ver:"2",full:"2.4.0"},browser:{name:"?"},device:"SmartTV"},
+"Mozilla/5.0 (SMART-TV; LINUX; Tizen 2.4.0) AppleWebKit/538.1 (KHTML, like Gecko) Version/1.1 TV Safari/538.1",
+
+//{os:{name:"OS X",ver:"8",full:"8.1.3"},browser:{name:"SamsungBrowser",ver:"1",full:"1.1"},device:"SmartTV"},
+//"AppleCoreMedia/1.0.0.12B466 (Apple TV; U; CPU OS 8_1_3 like Mac OS X; en_us)",
+//"AppleTV/tvOS/9.1.1",
+//"Haystack TV/20 (Apple TV; iOS 10.1; Scale/1.00)",
+
+
 
 
 

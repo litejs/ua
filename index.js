@@ -17,6 +17,7 @@
 		"Edge",
 		"Chrome",
 		"Android",
+		/SamsungBrowser|TV Safari/, "Samsung Browser",
 		"Safari",
 		"IE",
 		"MSIE"
@@ -103,6 +104,7 @@
 				// On Desktop, geckotrail is the fixed string "20100101"
 				map.Gecko && map.Gecko.ver == "20100101" ||
 				map.Firefox ? DESKTOP :
+				map.SmartTV || map.GoogleTV || sp[0] == "SMART-TV" ? SMART_TV :
 				map.Alexa || map.DuckDuckBot || map.Facebook || botList.indexOf(sp[1]) > -1 ? BOT :
 				map.curl || first && first[1] == "Wget" ? TOOL :
 				"?"
@@ -114,7 +116,8 @@
 				t = alias[name = list[i++]]
 				if (typeof name !== "string") {
 					if (match = name.exec(str)) {
-						t = alias[name = match[0]] = list[i++]
+						t = alias[name = match[0]] = list[i]
+						i = len
 					} else {
 						name = list[i++]
 					}

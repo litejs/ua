@@ -5,8 +5,6 @@ module.exports = [
 //"BlackBerry9300/5.0.0.912 Profile/MIDP-2.1 Configuration/CLDC-1.1 VendorID/378",
 {os:{name:"BlackBerry",ver:"10"}},
 //"Mozilla/5.0 (BB10; Touch) AppleWebKit/537.3+ (KHTML, like Gecko) Version/10.0.9.386 Mobile Safari/537.3+",
-{os:{name:"Tizen",ver:"2",full:"2.3"}},
-"Mozilla/5.0 (Linux; Tizen 2.3; SAMSUNG SM-Z130H) AppleWebKit/537.3 (KHTML, like Gecko) Version/2.3 Mobile Safari/537.3",
 
 {os:{name:"PlayStation",ver:"4"}},
 //"Mozilla/5.0 (PlayStation 4 3.00) AppleWebKit/537.73 (KHTML, like Gecko)",

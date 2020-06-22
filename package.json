@@ -1,6 +1,6 @@
 {
   "name": "@litejs/ua",
-  "version": "20.6.0",
+  "version": "20.6.1",
   "license": "MIT",
   "author": "Lauri Rooden <lauri@rooden.ee>",
   "description": "Simple User-Agent parser",
