@@ -3,9 +3,9 @@ module.exports = [
 {browser:{name:"Safari",ver:"?",full:"?"}},
 "Mozilla/5.0 (Windows; U; Windows NT 6.0; en-US) Safari/421.0",
 
-{browser:{name:"Safari",ver:"7",full:"7.0.3"}},
+{browser:{name:"Safari",ver:"7",full:"7.0.3"},os:{name:"OS X",ver:"10",full:"10.9.3"}},
 "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_9_3) AppleWebKit/537.75.14 (KHTML, like Gecko) Version/7.0.3 Safari/7046A194A",
-{browser:{name:"Safari",ver:"6",full:"6.0"}},
+{browser:{name:"Safari",ver:"6",full:"6.0"},os:{name:"iOS",ver:"6",full:"6.0"}},
 "Mozilla/5.0 (iPad; CPU OS 6_0 like Mac OS X) AppleWebKit/536.26 (KHTML, like Gecko) Version/6.0 Mobile/10A5355d Safari/8536.25",
 {browser:{name:"Safari",ver:"5",full:"5.1.7"}},
 "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_6_8) AppleWebKit/537.13+ (KHTML, like Gecko) Version/5.1.7 Safari/534.57.2",

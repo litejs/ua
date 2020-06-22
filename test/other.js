@@ -44,5 +44,11 @@ module.exports = [
 {os:{name:"iOS",ver:"7",full:"7.0.2"}},
 "APP-BE Test/1.0 (iPad; Apple; CPU iPhone OS 7_0_2 like Mac OS X)",
 
+{browser:{name:"curl",ver:"7",full:"7.19.5"}, device:"Tool"},
+"curl/7.19.5 (i586-pc-mingw32msvc) libcurl/7.19.5 OpenSSL/0.9.8l zlib/1.2.3",
+
+{browser:{name:"Wget",ver:"1",full:"1.8.1"}, device:"Tool"},
+"Wget/1.8.1",
+
 0 ]
 

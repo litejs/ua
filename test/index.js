@@ -10,6 +10,7 @@ require("litejs/test")
 		"safari.js",
 		"ie.js",
 		"windows.js",
+		"bot.js",
 		"other.js",
 		"unsorted.js"
 	]

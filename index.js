@@ -5,14 +5,14 @@
 	// http://www.zytrax.com/tech/web/mobile_ids.html
 	exports.ua = ua
 
-	var re = /(\w+)(?:\/| )(\S+)(?:\s*\((.+?)\))?/g
+	var re = /(\w+)(?:\/| )([^\s;]+)(?:\s*\((.+?)\))?/g
 	, MOBILE = "Mobile"
 	, TABLET = "Tablet"
 	, DESKTOP = "Desktop"
 	, SMART_TV = "SmartTV"
+	, BOT = "Bot"
+	, TOOL = "Tool"
 	, browsers = [
-		"AmigaVoyager",
-		"Opera",
 		"Firefox",
 		"Edge",
 		"Chrome",
@@ -22,6 +22,8 @@
 		"MSIE"
 	]
 	, alias = {
+		ia_archiver: "Alexa",
+		facebookexternalhit: "Facebook",
 		CriOS: "Chrome",
 		FxiOS: "Firefox",
 		OPiOS: "Opera",
@@ -29,6 +31,14 @@
 		AppleWebKit: "Safari",
 		Macintosh: "OS X"
 	}
+	, botList = [
+		"Baiduspider",
+		"Bingbot",
+		"Exabot",
+		"Googlebot",
+		"Yahoo!",
+		"YandexBot"
+	]
 	, osList = [
 		"AmigaOS",
 		"Windows",
@@ -65,14 +75,15 @@
 	}
 
 	function ua(str) {
-		var _device, match, spi
+		var _device, match, spi, first
 		, sp = ""
 		, map = {}
 
 		for (; match = re.exec(str);) {
+			if (!first) first = match
 			spi = map[alias[match[1]] || match[1]] = map[match[1]] = {
 				name: alias[match[1]] || match[1],
-				ver: match[2]
+				ver: match[2] || "?"
 			}
 			if (match[3]) {
 				spi.sub = match[3]
@@ -92,6 +103,8 @@
 				// On Desktop, geckotrail is the fixed string "20100101"
 				map.Gecko && map.Gecko.ver == "20100101" ||
 				map.Firefox ? DESKTOP :
+				map.Alexa || map.DuckDuckBot || map.Facebook || botList.indexOf(sp[1]) > -1 ? BOT :
+				map.curl || first && first[1] == "Wget" ? TOOL :
 				"?"
 			)
 		}
@@ -167,10 +180,17 @@
 						ver: ffOs[map.Gecko.ver] || "?"
 					}
 				}
+				if (list == browsers) {
+					if (first && first[1] != "Mozilla") {
+						match = { name: alias[first[1]] || first[1] }
+						if (parseFloat(first[2])) match.ver = first[2]
+					}
+					if (sp[0] == "compatible") match = { name: sp[1], ver: sp[2] }
+				}
 			}
 			if (match && match.ver) {
 				match.full = match.ver
-				match.ver = match.ver.split(".").shift()
+				match.ver = match.ver.split(".")[0]
 			}
 			return match || {name: "?"}
 		}
