@@ -1,10 +1,8 @@
 
 
 
-require("litejs/test")
-.describe("User-Agent parser", function() {
+describe("User-Agent parser", function() {
 	var parse = require("..").ua
-	, it = this.it
 	, files = [
 		"android.js",
 		"safari.js",

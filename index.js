@@ -19,8 +19,7 @@
 		"Android",
 		/SamsungBrowser|TV Safari/, "Samsung Browser",
 		"Safari",
-		"IE",
-		"MSIE"
+		/IE|MSIE|Trident.*rv:([\d.]+)/, "IE"
 	]
 	, alias = {
 		ia_archiver: "Alexa",
@@ -28,7 +27,6 @@
 		CriOS: "Chrome",
 		FxiOS: "Firefox",
 		OPiOS: "Opera",
-		MSIE: "IE",
 		AppleWebKit: "Safari",
 		Macintosh: "OS X"
 	}
@@ -44,7 +42,7 @@
 		"AmigaOS",
 		"Windows",
 		"Android",
-		/iP(ad|od|hone)/, "iOS",
+		/iP(?:ad|od|hone)/, "iOS",
 		"Macintosh",
 		"Tizen",
 		/(?:web|hpw)[o0]s/i, "webOS",
@@ -66,13 +64,14 @@
 	, winVer = {
 		"4.90":"ME",
 		"5.0":"2000",
+		"5.01":"2000",
 		"5.1":"XP",
-		"5.2":"XP",
+		"5.2":"XP", // Or Server 2003
 		"6.0":"Vista",
 		"6.1":"7",
 		"6.2":"8",
 		"6.3":"8.1",
-		"6.4":"10"
+		"6.4":"10" // Windows 10 preview
 	}
 
 	function ua(str) {
@@ -101,10 +100,10 @@
 			device: _device || (
 				map.Mobile || spi(MOBILE) > -1 ? MOBILE :
 				spi(TABLET) > -1 || spi("Android") > -1 ? TABLET :
+				map.SmartTV || map.GoogleTV || sp[0] == "SMART-TV" ? SMART_TV :
 				// On Desktop, geckotrail is the fixed string "20100101"
 				map.Gecko && map.Gecko.ver == "20100101" ||
-				map.Firefox ? DESKTOP :
-				map.SmartTV || map.GoogleTV || sp[0] == "SMART-TV" ? SMART_TV :
+				map.Firefox || spi("Linux") > -1 ? DESKTOP :
 				map.Alexa || map.DuckDuckBot || map.Facebook || botList.indexOf(sp[1]) > -1 ? BOT :
 				map.curl || first && first[1] == "Wget" ? TOOL :
 				"?"
@@ -122,7 +121,9 @@
 						name = list[i++]
 					}
 				}
-				if (match = map[name]) {
+				if (match && match[1]) {
+					match = { name: t, ver: match[1] }
+				} else if (match = map[name]) {
 					if (name == "Edge" && match.ver < 42) {
 						match.ver = "" + (parseFloat(match.ver) + 25)
 					}
