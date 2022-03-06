@@ -25,13 +25,7 @@ describe("User-Agent parser", function() {
 			for (; i < len; i++) {
 				if (typeof input[i] === "string") {
 					res = parse(input[i])
-					log = input[i] + "\n" + JSON.stringify(res) + "\n" + JSON.stringify(map)
-					if (map.os) assert.equal(res.os, map.os, log)
-					if (map.browser) {
-						delete res.browser.sub
-						assert.equal(res.browser, map.browser, log)
-					}
-					if (map.device) assert.equal(res.device, map.device, log)
+					assert.own(res, map)
 				} else {
 					map = input[i]
 				}
