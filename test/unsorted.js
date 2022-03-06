@@ -23,6 +23,10 @@ module.exports = [
 "Mozilla/5.0 (iPhone; CPU iPhone OS 8_3 like Mac OS X) AppleWebKit/600.1.4 (KHTML, like Gecko) FxiOS/1.1 Mobile/12F69 Safari/600.1.4",
 "Mozilla/5.0 (iPod touch; CPU iPhone OS 8_3 like Mac OS X) AppleWebKit/600.1.4 (KHTML, like Gecko) FxiOS/1.1 Mobile/12F69 Safari/600.1.4",
 
+// Brave
+{os:{name:"Windows",ver:"10",full:"10.0"},browser:{name:"Brave",ver:"84",full:"84.0.4147.89"},device:"Desktop"},
+"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Brave Chrome/84.0.4147.89 Safari/537.36",
+
 // Chrome for iOS
 {os:{name:"iOS",ver:"10",full:"10.3"},browser:{name:"Chrome",ver:"56",full:"56.0.2924.75"},device:"Mobile"},
 "Mozilla/5.0 (iPhone; CPU iPhone OS 10_3 like Mac OS X) AppleWebKit/602.1.50 (KHTML, like Gecko) CriOS/56.0.2924.75 Mobile/14E5239e Safari/602.1",

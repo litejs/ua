@@ -15,6 +15,7 @@
 	, browsers = [
 		"Firefox",
 		"Edge",
+		/Brave Chrome\/([\d.]+)/, "Brave",
 		"Chrome",
 		"Android",
 		/SamsungBrowser|TV Safari/, "Samsung Browser",
