@@ -1,17 +1,15 @@
-[LiteJS]: https://www.litejs.com/
-[npm package]: https://www.npmjs.com/package/@litejs/ua
-[GitHub repo]: https://github.com/litejs/ua
 
-[size]: https://packagephobia.now.sh/badge?p=@litejs/ua
-[size-link]: https://packagephobia.now.sh/result?p=@litejs/ua
-[test]: https://github.com/litejs/ua/workflows/Test/badge.svg?branch=master
-[test-link]: https://github.com/litejs/ua/actions?query=workflow%3ATest
-
-@litejs/ua &ndash; [![test][test]][test-link] [![size][size]][size-link]
-==========
+[1]: https://badgen.net/coveralls/c/github/litejs/ua
+[2]: https://coveralls.io/r/litejs/ua
+[3]: https://badgen.net/packagephobia/install/ua
+[4]: https://packagephobia.now.sh/result?p=ua
+[5]: https://badgen.net/badge/icon/Buy%20Me%20A%20Tea/orange?icon=kofi&label
+[6]: https://www.buymeacoffee.com/lauriro
 
 
-Simple User-Agent parser for statistical purposes in 2KB minified.
+User-Agent Parser &ndash; [![Coverage][1]][2] [![size][3]][4] [![Buy Me A Tea][5]][6]
+=================
+
 
 ```javascript
 var ua = require("@litejs/ua").ua
@@ -23,9 +21,10 @@ ua("Mozilla/5.0 (Mobile; rv:18.1) Gecko/18.1 Firefox/18.1")
 
 ## External links
 
-[GitHub repo][] |
-[npm package][] |
-[Coveralls code coverage](https://coveralls.io/github/litejs/ua)
+[GitHub repo](https://github.com/litejs/ua) |
+[npm package](https://npmjs.org/package/ua) |
+[Coveralls coverage](https://coveralls.io/github/litejs/ua) |
+[Buy Me A Tea][6]
 
 
 ## Licence
