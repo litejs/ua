@@ -1,8 +1,8 @@
 
 [1]: https://badgen.net/coveralls/c/github/litejs/ua
 [2]: https://coveralls.io/r/litejs/ua
-[3]: https://badgen.net/packagephobia/install/ua
-[4]: https://packagephobia.now.sh/result?p=ua
+[3]: https://badgen.net/packagephobia/install/@litejs/ua
+[4]: https://packagephobia.now.sh/result?p=@litejs/ua
 [5]: https://badgen.net/badge/icon/Buy%20Me%20A%20Tea/orange?icon=kofi&label
 [6]: https://www.buymeacoffee.com/lauriro
 
@@ -22,7 +22,7 @@ ua("Mozilla/5.0 (Mobile; rv:18.1) Gecko/18.1 Firefox/18.1")
 ## External links
 
 [GitHub repo](https://github.com/litejs/ua) |
-[npm package](https://npmjs.org/package/ua) |
+[npm package](https://npmjs.org/package/@litejs/ua) |
 [Coveralls coverage](https://coveralls.io/github/litejs/ua) |
 [Buy Me A Tea][6]
 
