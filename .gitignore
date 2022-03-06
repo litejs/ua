@@ -1,0 +1,8 @@
+/.env
+/.nyc_output
+/coverage
+/node_modules
+/wiki
+
+.DS_Store
+

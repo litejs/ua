@@ -80,7 +80,7 @@
 		, sp = ""
 		, map = {}
 
-		for (; match = re.exec(str);) {
+		for (; (match = re.exec(str));) {
 			if (!first) first = match
 			spi = map[alias[match[1]] || match[1]] = map[match[1]] = {
 				name: alias[match[1]] || match[1],
@@ -115,7 +115,7 @@
 			for (var match, name, t, i = 0, len = list.length; !match && i < len; ) {
 				t = alias[name = list[i++]]
 				if (typeof name !== "string") {
-					if (match = name.exec(str)) {
+					if ( (match = name.exec(str)) ) {
 						t = alias[name = match[0]] = list[i]
 						i = len
 					} else {
@@ -124,7 +124,7 @@
 				}
 				if (match && match[1]) {
 					match = { name: t, ver: match[1] }
-				} else if (match = map[name]) {
+				} else if ( (match = map[name]) ) {
 					if (name === "Edge" && match.ver < 42) {
 						match.ver = "" + (parseFloat(match.ver) + 25)
 					}
@@ -157,7 +157,7 @@
 							match.ver = "ME"
 							break
 						}
-						if (t = spi("NT") + 1 || spi("9x") + 1) idx = t - 1
+						if ( (t = spi("NT") + 1 || spi("9x") + 1) ) idx = t - 1
 						t = sp[idx + 1]
 						if (t === "Phone" || t === MOBILE || t === "CE") {
 							match.name += " " + t
@@ -200,6 +200,6 @@
 			return match || {name: "?"}
 		}
 	}
-}(this)
+}(this) // jshint ignore:line
 
 
