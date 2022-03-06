@@ -88,7 +88,7 @@
 			}
 			if (match[3]) {
 				spi.sub = match[3]
-				if (sp == "") {
+				if (sp === "") {
 					sp = match[3].split(/(?:x86_64|[\/;\s])+/)
 				}
 			}
@@ -101,12 +101,12 @@
 			device: _device || (
 				map.Mobile || spi(MOBILE) > -1 ? MOBILE :
 				spi(TABLET) > -1 || spi("Android") > -1 ? TABLET :
-				map.SmartTV || map.GoogleTV || sp[0] == "SMART-TV" ? SMART_TV :
+				map.SmartTV || map.GoogleTV || sp[0] === "SMART-TV" ? SMART_TV :
 				// On Desktop, geckotrail is the fixed string "20100101"
-				map.Gecko && map.Gecko.ver == "20100101" ||
+				map.Gecko && map.Gecko.ver === "20100101" ||
 				map.Firefox || spi("Linux") > -1 ? DESKTOP :
 				map.Alexa || map.DuckDuckBot || map.Facebook || botList.indexOf(sp[1]) > -1 ? BOT :
-				map.curl || first && first[1] == "Wget" ? TOOL :
+				map.curl || first && first[1] === "Wget" ? TOOL :
 				"?"
 			)
 		}
@@ -125,10 +125,10 @@
 				if (match && match[1]) {
 					match = { name: t, ver: match[1] }
 				} else if (match = map[name]) {
-					if (name == "Edge" && match.ver < 42) {
+					if (name === "Edge" && match.ver < 42) {
 						match.ver = "" + (parseFloat(match.ver) + 25)
 					}
-					if (name == "Safari") {
+					if (name === "Safari") {
 						t = parseInt((map.AppleWebKit || match).ver)
 						match.ver = (
 							t < 100 ? "1.0" :
@@ -140,28 +140,28 @@
 							"?"
 						)
 					}
-				} else if ((idx = spi(t == "iOS" || t == "OS X" ? "OS" : name)) > -1) {
+				} else if ((idx = spi(t === "iOS" || t === "OS X" ? "OS" : name)) > -1) {
 					match = {
 						name: alias[name] || name
 					}
-					if (name == "Android") {
-						if (list == browsers && map.Version) {
+					if (name === "Android") {
+						if (list === browsers && map.Version) {
 							match.name += " Browser"
 							match.ver = map.Version.ver
 							break
 						}
 					}
-					if (name == "Windows") {
+					if (name === "Windows") {
 						_device = DESKTOP
-						if (sp[idx + 1] == "ME") {
+						if (sp[idx + 1] === "ME") {
 							match.ver = "ME"
 							break
 						}
 						if (t = spi("NT") + 1 || spi("9x") + 1) idx = t - 1
 						t = sp[idx + 1]
-						if (t == "Phone" || t == MOBILE || t == "CE") {
+						if (t === "Phone" || t === MOBILE || t === "CE") {
 							match.name += " " + t
-							idx += 1 + (sp[idx + 2] == "OS")
+							idx += 1 + (sp[idx + 2] === "OS")
 							_device = MOBILE
 						} else {
 							t = name
@@ -171,7 +171,7 @@
 						match.ver = name === t && winVer[sp[idx]] || sp[idx].replace(/_/g, ".")
 					}
 					if (t === "iOS") {
-						_device = name == "iPad" ? TABLET : MOBILE
+						_device = name === "iPad" ? TABLET : MOBILE
 					}
 					if (match.name === "webOS") {
 						_device = SMART_TV
@@ -179,18 +179,18 @@
 				}
 			}
 			if (!match) {
-				if (list == osList) {
+				if (list === osList) {
 					if (map.Gecko) match = {
 						name: "Firefox OS",
 						ver: ffOs[map.Gecko.ver] || "?"
 					}
 				}
-				if (list == browsers) {
-					if (first && first[1] != "Mozilla") {
+				if (list === browsers) {
+					if (first && first[1] !== "Mozilla") {
 						match = { name: alias[first[1]] || first[1] }
 						if (parseFloat(first[2])) match.ver = first[2]
 					}
-					if (sp[0] == "compatible") match = { name: sp[1], ver: sp[2] }
+					if (sp[0] === "compatible") match = { name: sp[1], ver: sp[2] }
 				}
 			}
 			if (match && match.ver) {
