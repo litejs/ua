@@ -24,6 +24,7 @@ ua("Mozilla/5.0 (Mobile; rv:18.1) Gecko/18.1 Firefox/18.1")
 [GitHub repo](https://github.com/litejs/ua) |
 [npm package](https://npmjs.org/package/@litejs/ua) |
 [Coveralls coverage](https://coveralls.io/github/litejs/ua) |
+[Style Guide](https://github.com/litejs/litejs/wiki/Style-Guide) |
 [Buy Me A Tea][6]
 
 
