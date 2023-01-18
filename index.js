@@ -84,7 +84,7 @@
 			if (!first) first = match
 			spi = map[alias[match[1]] || match[1]] = map[match[1]] = {
 				name: alias[match[1]] || match[1],
-				ver: match[2]
+				ver: match[2].replace(/,/g, ".")
 			}
 			if (match[3]) {
 				spi.sub = match[3]
