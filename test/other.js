@@ -15,6 +15,15 @@ module.exports = [
 {os:{name:"Linux"}},
 "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Ubuntu Chromium/31.0.1650.63 Chrome/31.0.1650.63 Safari/537.36",
 
+{browser:{name:"Firefox",ver:"34",full:"34.0"},os:{name:"FreeBSD"}},
+"Mozilla/5.0 (FreeBSD; Viera; rv:34.0) Gecko/20100101 Firefox/34.0",
+
+{os:{name:"OpenBSD"}},
+"Mozilla/5.0 (X11; OpenBSD i386) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/36.0.1985.125 Safari/537.36",
+
+{browser:{name:"ELinks"},os:{name:"NetBSD","ver":"3","full":"3.0.2PATCH"}},
+"ELinks (0.4.3; NetBSD 3.0.2PATCH sparc64; 141x19)",
+
 {os:{name:"Chromium OS",ver:"10575",full:"10575.58.0"}},
 "Mozilla/5.0 (X11; CrOS x86_64 10575.58.0) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.99 Safari/537.36",
 

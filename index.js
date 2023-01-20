@@ -49,6 +49,9 @@
 		/(?:web|hpw)[o0]s/i, "webOS",
 		/CrOS/, "Chromium OS",
 		"Linux",
+		"FreeBSD",
+		"NetBSD",
+		"OpenBSD",
 		"Fuchsia"
 	]
 	, ffOs = {
@@ -63,6 +66,7 @@
 		"44": "2.5"
 	}
 	, winVer = {
+		"4.0":"NT",
 		"4.90":"ME",
 		"5.0":"2000",
 		"5.01":"2000",
