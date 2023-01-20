@@ -114,6 +114,7 @@
 		}
 
 		function scan(list) {
+			// jshint shadow:inner
 			for (var match, name, idx, t, i = 0, len = list.length; !match && i < len; ) {
 				t = alias[name = list[i++]]
 				if (typeof name !== "string") {
