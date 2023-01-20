@@ -91,11 +91,8 @@
 				name: alias[match[1]] || match[1],
 				ver: match[2].replace(/,/g, ".")
 			}
-			if (match[3]) {
-				spi.sub = match[3]
-				if (sp === "") {
-					sp = match[3].split(/(?:x86_64|[\/;\s])+/)
-				}
+			if (match[3] && sp === "") {
+				sp = match[3].split(/(?:x86_64|[\/;\s])+/)
 			}
 		}
 		spi = sp.indexOf.bind(sp)
@@ -117,7 +114,7 @@
 		}
 
 		function scan(list) {
-			for (var match, name, t, i = 0, len = list.length; !match && i < len; ) {
+			for (var match, name, idx, t, i = 0, len = list.length; !match && i < len; ) {
 				t = alias[name = list[i++]]
 				if (typeof name !== "string") {
 					if ( (match = name.exec(str)) ) {
