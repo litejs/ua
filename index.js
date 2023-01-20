@@ -22,7 +22,7 @@
 		"Safari",
 		/IE|MSIE|Trident.*rv:([\d.]+)/, "IE"
 	]
-	, alias = {
+	, _alias = {
 		ia_archiver: "Alexa",
 		facebookexternalhit: "Facebook",
 		CriOS: "Chrome",
@@ -79,10 +79,11 @@
 		"6.4":"10" // Windows 10 preview
 	}
 
-	function ua(str) {
+	function ua(str, hint) {
 		var _device, match, spi, first
 		, sp = ""
 		, map = {}
+		, alias = hint || _alias
 
 		for (; (match = re.exec(str));) {
 			if (!first) first = match

@@ -27,6 +27,10 @@ module.exports = [
 {os:{name:"Windows",ver:"10",full:"10.0"},browser:{name:"Brave",ver:"84",full:"84.0.4147.89"},device:"Desktop"},
 "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Brave Chrome/84.0.4147.89 Safari/537.36",
 
+{os:{name:"Linux"},browser:{name:"Brave",ver:"102",full:"102.0.5005.115"},device:"Desktop", hint:{"Chrome": "Brave"}},
+"Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/102.0.5005.115 Safari/537.36",
+
+
 // Chrome for iOS
 {os:{name:"iOS",ver:"10",full:"10.3"},browser:{name:"Chrome",ver:"56",full:"56.0.2924.75"},device:"Mobile"},
 "Mozilla/5.0 (iPhone; CPU iPhone OS 10_3 like Mac OS X) AppleWebKit/602.1.50 (KHTML, like Gecko) CriOS/56.0.2924.75 Mobile/14E5239e Safari/602.1",
