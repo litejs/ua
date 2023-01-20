@@ -53,6 +53,8 @@ module.exports = [
 
 {browser:{name:"curl",ver:"7",full:"7.19.5"}, device:"Tool"},
 "curl/7.19.5 (i586-pc-mingw32msvc) libcurl/7.19.5 OpenSSL/0.9.8l zlib/1.2.3",
+{browser:{name:"PycURL",ver:"7",full:"7.43.0.2"}, device:"Tool"},
+"PycURL/7.43.0.2 libcurl/7.47.0 OpenSSL/1.0.2g zlib/1.2.8 libidn/1.32 librtmp/2.3",
 
 {browser:{name:"Wget",ver:"1",full:"1.8.1"}, device:"Tool"},
 "Wget/1.8.1",

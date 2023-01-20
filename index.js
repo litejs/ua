@@ -111,7 +111,7 @@
 				map.Gecko && map.Gecko.ver === "20100101" ||
 				map.Firefox || spi("Linux") > -1 ? DESKTOP :
 				map.Alexa || map.DuckDuckBot || map.Facebook || botList.indexOf(sp[1]) > -1 ? BOT :
-				map.curl || first && first[1] === "Wget" ? TOOL :
+				map.curl || map.libcurl || first && first[1] === "Wget" ? TOOL :
 				"?"
 			)
 		}
