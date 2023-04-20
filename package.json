@@ -1,6 +1,6 @@
 {
   "name": "@litejs/ua",
-  "version": "23.2.0",
+  "version": "23.4.0",
   "license": "MIT",
   "author": "Lauri Rooden <lauri@rooden.ee>",
   "description": "Simple User-Agent parser",
@@ -16,7 +16,7 @@
     "test": "lj test --coverage --brief test/index.js && jshint *.js"
   },
   "devDependencies": {
-    "@litejs/cli": "23.2.8",
+    "@litejs/cli": "23.4.1",
     "jshint": "2.13.6"
   },
   "litejs": {
