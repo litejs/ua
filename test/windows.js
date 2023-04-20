@@ -42,6 +42,20 @@ module.exports = [
 
 {os:{name:"Windows",ver:"10",full:"10.0"},browser:{name:"Edge",ver:"42",full:"42.17134"}},
 "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/64.0.3282.140 Safari/537.36 Edge/17.17134",
+//"Mozilla/5.0 (Windows Mobile 10; Android 10.0; Microsoft; Lumia 950XL) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/112.0.0.0 Mobile Safari/537.36 Edge/40.15254.603",
+//"Mozilla/5.0 (Windows NT 10.0; Win64; x64; Xbox; Xbox One) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/112.0.0.0 Safari/537.36 Edge/44.18363.8131",
+
+{os:{name:"Windows",ver:"10",full:"10.0"},browser:{name:"Edge",ver:"112",full:"112.0.1722.48"}},
+"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/112.0.0.0 Safari/537.36 Edg/112.0.1722.48",
+
+
+//"Mozilla/5.0 (Macintosh; Intel Mac OS X 13_3_1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/112.0.0.0 Safari/537.36 Edg/112.0.1722.48",
+{os:{name:"Android",ver:"10",full:"10"},browser:{name:"Edge",ver:"112",full:"112.0.1722.48"}},
+"Mozilla/5.0 (Linux; Android 10; Pixel 3 XL) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/112.0.0.0 Mobile Safari/537.36 EdgA/112.0.1722.48",
+
+
+{os:{name:"iOS",ver:"16",full:"16.4.1"},browser:{name:"Edge",ver:"112",full:"112.0.1722.48"}},
+"Mozilla/5.0 (iPhone; CPU iPhone OS 16_4_1 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/16.0 EdgiOS/112.0.1722.48 Mobile/15E148 Safari/605.1.15",
 
 
 {os:{name:"Windows CE",ver:"7",full:"7.11"},browser:{name:"IE",ver:"6",full:"6.0"},device:"Mobile"},
